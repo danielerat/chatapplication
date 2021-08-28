@@ -72,3 +72,5 @@ The `status` attribute describes if the transaction was successful or not.
 | 400 | `BAD REQUEST` |
 | 404 | `NOT FOUND` |
 | 500 | `INTERNAL SERVER ERROR` |
+
+https://www.postman.com/danielerat/workspace/chatapplicationurapi/collection/17257182-7fadd075-5f3f-4f10-befe-f70569b48da5
