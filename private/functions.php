@@ -187,7 +187,97 @@ function convert_to_time($timestamp)
 
 
 // Functions to display Appropriate themes
+function display_appropriate_theme($theme)
+{
+    if ($theme !== 1) {
+        if ($theme == 2) {
+            return '
+                    :root{
+                        --onlineColor        : rgb(212, 212, 212);
+                        --mainDarkColor      : rgb(27, 22, 22);
+                        --mainLightColor : rgb(53, 52, 52);
+                        --mainLightDarkColor : rgb(196, 161, 4);
+                    --mainBlueColor      :var(--warning);
+                    --mainSecondaryColor :rgb(100, 86, 21);;
+                    // Text Color
+                    --text-black    :rgb(0, 0, 0);
+                    --text-muted    :#ccc;
+                    --text-light    :var(--light);
+                    --text-red      :#ca0000;
+                    --text-yellow   :var(--warning);
+                    --text-dark-red :#bb0000;
+                    --text-blue     : var(--primary);
 
+                    --chatHoverTextColor    : #afb982;
+                    --chatBackground        :#efffa9;
+                    --chatTextColor         : rgb(0, 0, 0);
+
+                    --mutedColor     : rgb(32, 32, 32);
+                    --modalcolor: var(--warning);
+                    }
+            ';
+            exit;
+        } else if ($theme == 3) {
+            return '
+            :root{
+                --scrollbar:#76323f;
+                --onlineColor        :#eee;
+                --mainDarkColor      :#76323f;
+                --mainLightColor :#565656;
+                --mainLightDarkColor :#66303a;
+                --mainBlueColor      :#565656;
+                --mainSecondaryColor :#7c6655;
+                // Text Color
+                --text-black    :#fff;
+                --text-muted    :#fff;
+                --text-light    :#fff;
+                --text-red      :#e00;
+                --text-yellow   :#{$text-yellow};
+                --text-dark-red :#{$text-dark-red};
+                --text-blue     :#{$text-blue};
+                --chatHoverTextColor    :#f0e1d6;
+                --chatBackground        :#d7cec7;
+                --chatTextColor         :#242424;
+                
+                --mutedColor     :#{$mutedColor};
+                --modalcolor:#f0e1d6;
+                }
+        ';
+            exit;
+        } else if ($theme == 4) {
+            return '
+            
+:root{
+    --onlineColor        :rgb(68, 255, 21);
+    --mainDarkColor      :#49274a;
+    --mainLightColor :#f4decb;
+    --mainLightDarkColor :#6c316e;
+    --mainBlueColor      :#94618e;
+    --mainSecondaryColor :#420a3d;
+    // Text Color
+    --text-black    :rgb(0, 0, 0);
+    --text-muted    :#ccc;
+    --text-light    :var(--light);
+    --text-red      :#ca0000;
+    --text-yellow   :var(--warning);
+    --text-dark-red :#bb0000;
+    --text-blue     : var(--primary);
+    
+    --scrollbar:rgb(187, 238, 241);
+    
+    --chatHoverTextColor    :#ddc8b9;
+    --chatBackground        :#f8eee7;
+    --chatTextColor         :rgb(0, 0, 0);
+    
+    --mutedColor     :rgb(32, 32, 32);
+    --modalcolor: #f8eee7};
+    
+    
+        ';
+            exit;
+        }
+    }
+}
 
 
 //Get The Time portion from the timestamp (Hour:Minutes)
