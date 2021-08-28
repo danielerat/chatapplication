@@ -159,7 +159,7 @@ if (is_post_request()) {
         $theme = $_POST['theme'] ?? 404;
         $usr = find_user_by_username(($_POST['username']) ?? "");
         $user = $usr['username'] ?? "";
-        if ($theme > 3 || $theme < 1) {
+        if ($theme > 4 || $theme < 1) {
             $err =  api_message("Failed !", "Unknown Theme");
             echo json_encode($err);
             exit;
