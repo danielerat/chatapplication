@@ -1,0 +1,488 @@
+$onlineColor: rgb(19, 231, 0);
+$mainDarkColor: var(--dark);
+$mainLightDarkColor: #343a40;
+$mainBlueColor: var(--primary);
+$mainSecondaryColor:var(--secondary);
+// Text Color
+$text-black:rgb(0, 0, 0);
+$text-muted:rgb(172, 172, 172);
+$text-light:var(--light);
+$text-red:var(--danger);
+$text-yellow:var(--warning);
+$text-dark-red:#470000;
+$text-blue:var(--primary);
+$chatHoverTextColor:#8bfff1;
+$chatBackground: #81f1e3;
+$chatTextColor: rgb(0, 0, 0);
+$mutedColor: rgb(180, 180, 180);
+$mainLightColor: rgb(238, 236, 236);
+$modalcolor:#fff;
+
+
+:root{
+--onlineColor        :#{$onlineColor};
+--mainDarkColor      :#{$mainDarkColor};
+--mainLightColor :#{$mainLightColor};
+--mainLightDarkColor :#{$mainLightDarkColor};
+--mainBlueColor      :#{$mainBlueColor};
+--mainSecondaryColor :#{$mainSecondaryColor};
+// Text Color
+--text-black    :#{$text-black};
+--text-muted    :#{$text-muted};
+--text-light    :#{$text-light};
+--text-red      :#{$text-red};
+--text-yellow   :#{$text-yellow};
+--text-dark-red :#{$text-dark-red};
+--text-blue     :#{$text-blue};
+
+--scrollbar:rgb(187, 238, 241);
+
+--chatHoverTextColor    :#{$chatHoverTextColor};
+--chatBackground        :#{$chatBackground};
+--chatTextColor         :#{$chatTextColor};
+
+--mutedColor     :#{$mutedColor};
+--modalcolor: #{$modalcolor};
+}
+
+.modal.fade{
+    .modal-content{
+        background-color: var(--modalcolor);
+        color: var(--text-black);
+    }
+}
+
+// Custon Cursors
+
+.cursor-pointer{
+    cursor: pointer;
+    }
+.cursor-zoom-in{
+    cursor: zoom-in;
+    }
+
+.cursor-grab{
+    cursor: grab;
+    };
+.cursor-resize{
+    cursor: ew-resize;
+    };
+
+
+
+//Custon Scrol Bars
+.scrollbar-black {
+    scrollbar-color: var(--scrollbar) rgba(161, 18, 18, 0);
+}
+
+.themelist{
+    
+    label{
+        width: 100%;
+        font-size: 16px;
+    }
+    ul{
+        border-radius: 100px;
+         overflow: hidden;
+         li{
+             width: 100%;
+             height: 20px;
+             background: #0f0c29;  /* fallback for old browsers */
+             background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+             background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+             
+        }
+    }
+    .ul2{
+        li{
+            background: #fffc00;  /* fallback for old browsers */
+          background: linear-gradient(to right, #350c0a, #e6e22f,#33201f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
+        }
+    }
+    .ul3{
+        li{
+            background: linear-gradient(to left, #565656,  #76323f , #7c6655, #d7cec7);
+        }
+    }
+    
+}
+
+
+
+
+.contacts {
+    background-color: var(--mainSecondaryColor);
+    // Group list carousel
+    .owl-carousel{
+        background-color: var(--mainDarkColor);
+        a.item{
+            color: var(--text-light);
+            background-color:var(--mainSecondaryColor );
+        }
+    }
+    
+    // All Contact List Section
+    .contacts_list{
+        overflow: scroll;
+        a{
+            color: var(--text-light);
+        }
+    }
+
+  a {   
+    text-decoration: none;
+    color: var(--text-light);
+  }
+  a:hover.active {
+    background-color: var(--mainBlueColor);
+  }
+
+  .list-group-item {
+    .badge,.media small{
+        position: absolute;
+        bottom: 0px;
+        font-size: 10px;
+        right: 10px;
+    }
+    .media {
+      .online-status {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+        width: 10px;
+        border-radius: 100%;
+        height: 10px;
+        background-color: var(--onlineColor);
+      }
+      .ltsmsg {
+        margin: 0px;
+        padding: 0px;
+        max-width: 200px;
+        overflow: hidden;
+      }
+      
+    }
+  }
+  .list-group-item:hover {
+    background-color: var(--mainDarkColor);
+  }
+
+  .settings {
+    height: 60px;
+    div {
+      padding: 17px;
+    }
+    div:hover {
+      background-color: var(--mainDarkColor);
+    }
+  }
+}
+
+.list-group-item {
+  background-color: var(--mainLightDarkColor);
+}
+/* Contact List Section End --------------------------------- */
+
+
+/* Messaeg Aka Chat Section Start --------------------------------- */
+.message_section{
+    
+    .date_separator{
+        background-color: var(--text-muted);
+        border-radius: 30px;
+        display: table;
+        padding: 5px 15px;
+        color: var(--text-light);
+    }
+    .group_sender{
+        color: var(--text-red);
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .nochatfound{
+        color: var(--text-yellow);
+        text-align: center;
+        position: relative;
+        top: 30%;
+    }
+    background-color: var(--mainDarkColor);
+	ul{
+        position: relative;
+        .chatmessagesetting{
+            display: none;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border:none;
+            .btn-sm:focus{
+                
+                border-color: rgba(255, 255, 255, 0);
+                outline: 0;
+                box-shadow: none;
+            
+        }
+            
+            .dropdown-menu{
+                .dropdown-menu{
+                    background-color: var(--mainLightColor);
+                }
+            }
+            
+        }
+        height:88vh;
+         overflow:scroll;
+		li{
+			position: relative;
+			display: table;
+			background-color: var(--chatBackground);
+			border-radius: 20px 20px 20px 0px;
+			max-width:70%;
+			min-width: 25%;
+			padding:10px  20px 20px 20px;
+			font-family: Roboto, sans-serif;
+			font-size: 16px;
+			margin: 5px 0px;
+            clear: both;
+			line-height: 22px;
+			color: var(--chatTextColor);
+
+            &:hover .chatmessagesetting{
+                display: inline-block;
+            }
+			
+			.reply{
+				border-radius:5px;
+				font-size:13px;
+				width: 120%;
+				padding-left:5px;
+				margin-left: -10%;
+				border-left:3px solid rgba(0, 0, 0, 0.657);
+				background-color: rgba(75, 75, 75,.2);
+				span{
+					font-weight: bold; 
+				}
+               
+			}
+
+			.deltime{
+				position: absolute;
+				right:20px;
+			}	
+
+            img{
+               max-width: 300px;
+            }
+		}
+        
+		li.me{
+			border-radius: 20px 20px 0px 20px; 
+			float: right;
+			clear: both;
+		}
+        li:hover{
+            background-color: var(--chatHoverTextColor);
+        }
+	}
+    .sendmsgsection{
+        color: var(--text-light);
+        i{
+            
+            cursor: pointer;
+            transition:.3s;
+            &:hover{
+                color: var(--text-blue);
+            }
+        }
+        
+    }
+}
+
+
+/* Contact Destion Section  -------------------------*/
+
+.section_contact_desc{
+    background-color: var(--mainSecondaryColor);
+    .contactdtls{
+    color: var(--text-light);
+        width: 100%;
+        
+        .profilep{
+            width: 180px; 
+            height:180px;
+            border-radius: 100%;
+            border: 2px solid #eee;
+            padding:2px;
+            transition: .2s;
+            background-color: var(--info);
+        }
+
+        .calicn{
+            
+            .col{
+                margin: 0px;
+                color: var(--text-light);
+                
+                a{
+                    color: var(--text-light);
+                }
+            }
+        }
+
+        .profilep:hover{
+            border:5px solid var(--mainBlueColor);
+            padding:2px;
+        }
+
+        
+    ul{
+            padding: 0px;   
+            color: var(--text-light);
+            li{
+                padding:0px 10px;
+                width: 100%;
+                margin: 0px;
+                transition:.4s;
+                border-right:2px solid var(--text-light);
+                list-style-type: none;  
+                cursor: pointer;
+                span{
+                    color:var(--text-muted);
+                    font-family: 'Courier New', Courier, monospace;
+                }
+            }
+
+            li:hover{
+                clip-path: polygon(0% 0, 100% 0, 98% 45%, 98% 45%, 100% 100%, 5% 100%, 0 100%, 0 100%, 0 0);
+                background: var(--mainDarkColor);
+            }
+        }
+
+        .block{
+            text-shadow: 1px 1px 1px rgb(29, 29, 29);
+            color: var(--text-red); 
+            &:hover{
+                color: var(--text-dark-red); 
+            }
+        }
+
+    }
+
+}
+ 
+@media screen and (max-width:1100px) {
+    .contacts {
+        .ltsmsg {
+            width: 100px;
+        }
+    }}
+@media screen and (max-width:900px) {
+    .contacts {
+       
+		.media h6{
+			font-size: 10px; 
+			font-weight: bold;
+		}
+		.badge,.media small{
+          
+			position: absolute;
+			bottom: 0px;
+			right: 40px;
+		}
+	}
+
+}
+
+
+// Side Panel Navigation Bar Displayer
+.setting_displayer{
+    background-color: var(--mainLightDarkColor);
+    display: inline-block;
+    border-radius:0px 10px 10px 0px;
+    padding:0px 0px 0px 0px;
+
+}
+
+
+.seachform{
+    width: 65%;
+    input{
+        background-color:var(--mainLightColor);
+    }
+}
+
+// Side Panel Navigation Bar Displayer
+.sidepanel{
+        width: 0px;
+        position: fixed;
+        z-index: 10;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: var(--mainDarkColor);
+        overflow-x: hidden;
+        transition: 0.2s;
+        padding-top: 10px;
+
+        ul{
+            li{
+                color: var(--text-muted);
+                font-weight: bold;
+              i{
+                //   Icons in the setting pannel
+                  color: var(--text-light);
+                  margin-left: 20px;
+              }
+              &:hover{
+                  color: var(--text-light);
+              }
+              &:last-child{
+                    i{
+                        color: var(--text-red);
+                        
+                    }
+                      color: var(--text-red);
+                      &:hover{
+                          color: var(--text-dark-red);
+                      }
+                      
+              }
+            }
+        }
+        .tophead{
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            padding: 2px;
+            border:5px solid var(--mainLightColor);
+        }
+        .myselfinfo{
+            padding-left: 10px;
+            color:var(--text-light);
+            h5{
+                padding-left:19px;
+            }
+        }
+
+    }
+
+
+    .closeside a {
+        margin:-10px 20px 20px 0px;
+        text-decoration: none;
+        font-size: 35px;
+        color: var(--text-light);
+        float: right;
+        width: 50px;
+        text-align: center;
+        height: 50px;
+        transition: 0.3s;
+        &:hover {
+            transform: rotate(90deg);
+            color: var(--text-red);
+        }
+    }
+
+   
+}

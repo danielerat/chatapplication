@@ -1,0 +1,103 @@
+<style>
+
+</style>
+
+<!-- Font Icon -->
+<link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+<!-- Animate Css  -->
+<link rel="stylesheet" href="assets/css/animate.min.css">
+
+<script src="assets/sweetalert2/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
+<!-- Main css -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<body>
+    <button class="btn-primary" data-toggle="modal" data-target="#thememodel" data-whatever="@mdo"
+        href="#">Hello</button>
+
+    <div class="modal fade text-danger" id="thememodel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Choose Your Theme</h4>
+                    <button class="close btn" data-dismiss="modal">&times;</button>
+                </div> <!-- Modal Header End------------>
+
+                <!--Modal Body -->
+                <div class="modal-body">
+
+                    <form method="POST" class="register-form" enctype="multipart/form-data" id="change_theme_form"
+                        action="private/create_group.php">
+                        <div class="container themelist">
+
+                            <div class="row row-cols-3">
+
+                                <div class="col ul1">
+                                    <div class="custom-control custom-radio ">
+                                        <ul class="list-unstyled p-0 m-0">
+                                            <li class="bg-primary w-100">&nbsp;</li>
+                                        </ul>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" id="them1" name="them"
+                                                value="1" checked>
+                                            <label class="custom-control-label" for="them1">Default</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col ul2">
+                                    <div class="custom-control custom-radio ">
+                                        <ul class="list-unstyled p-0 m-0">
+                                            <li class="bg-primary w-100">&nbsp;</li>
+                                        </ul>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" id="them2" name="them"
+                                                value="2">
+                                            <label class="custom-control-label" for="them2">Light</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col ul3">
+                                    <div class="custom-control custom-radio ">
+                                        <ul class="list-unstyled p-0 m-0">
+                                            <li class="bg-primary w-100">&nbsp;</li>
+                                        </ul>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" id="them3" name="them"
+                                                value="3">
+                                            <label class="custom-control-label" for="them3">Gold Dark</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+                <!--Modal Body End----------- -->
+                <!-- Modal Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="changetheme" class="form-submit btn btn-primary">Save Theme</button>
+                </div>
+            </div>
+        </div>
+        <!--Modal Dialog-->
+    </div> <!-- Theme Modal End-->
+    </div>
+
+
+
+</body>
+
+<script src="assets/js/jquery.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
